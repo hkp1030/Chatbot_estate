@@ -9,27 +9,27 @@
 <body>
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="/chat"><img src="{% static 'img/HotelLogo.jpg' %}" style="width: 200px; height: 100px; text-align: center"/></a>
+    <a class="navbar-brand" href="/chat"><img src="{% static 'img/logo.png' %}" style="width: 200px; height: 100px; text-align: center"/></a>
     <span style="position: absolute;top: 10px;right: 75px;">
         <a href="{% url 'chat:signin' %}" style="position: relative;display: inline-block;color: #ADB9CA;padding: 0px 16px 0px 0px">Sign In</a>
         <span style="color: #ADB9CA">|</span>
         <a href="{% url 'chat:signup' %}" style="position: relative;display: inline-block;color: #ADB9CA;padding: 0px 16px 0px 15px">Sing Up</a>
         <span style="color: #ADB9CA">|</span>
-        <a href="/chat" style="position: relative;display: inline-block;color: #ADB9CA;padding: 0px 0px 0px 15px;" >My Reservation</a>
+        <a href="/chat" style="position: relative;display: inline-block;color: #ADB9CA;padding: 0px 0px 0px 15px;" >My Consult</a>
     </span>
       <div style="position: center;padding: 0px 66px 0px 30px;">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/chat">About The Hotel</a>
+            <a class="nav-link" href="/chat">About The Estate Market</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Reservation
+              Consult
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a href="{% url 'chat:reservation' %}" class="dropdown-item">Room</a>
-              <a href="{% url 'chat:houseKeeping' %}" class="dropdown-item">Housekeeping</a>
-              <a href="{% url 'chat:fbConcierge' %}" class="dropdown-item">F&B | Concierge</a>
+              <a href="{% url 'chat:reservation' %}" class="dropdown-item">Land</a>
+              <!--<a href="{% url 'chat:houseKeeping' %}" class="dropdown-item">Building</a>-->
+              <!--<a href="{% url 'chat:fbConcierge' %}" class="dropdown-item">F&B | Concierge</a>-->
             </div>
           </li>
           <li class="nav-item">
@@ -40,7 +40,7 @@
   </nav>
 </header>
 
-        <h3 style="text-align: center; margin: 50px 0px 10px 0px">Room Reservation</h3>
+        <h3 style="text-align: center; margin: 50px 0px 10px 0px">Estate Market Consult</h3>
     <hr align="center" style="width: 300px; border: 1px solid;">
     <div style="text-align: -webkit-center;margin-top: 50px">
         <table style="border: none;">
@@ -58,7 +58,7 @@
             </td>
           </tr>
           <tr>
-            <td width=150px style="word-break:break-all;vertical-align: top;">check-in / out</td>
+            <td width=150px style="word-break:break-all;vertical-align: top;">Consult Date</td>
             <td colspan="5" width=350px style="word-break:break-all;margin-right: 50px;vertical-align: top;">
                 <div class="contentValue">
                     <div id="multiSelect"></div>
@@ -66,40 +66,22 @@
             </td>
           </tr>
           <tr>
-            <td>Room</td>
+            <td>Consult Area</td>
             <td colspan="5">
           <select class="custom-select">
-            <option value="1">Standard Double</option>
-            <option value="2">Standard Twin</option>
-            <option value="3">Standard Family Twin</option>
-            <option value="4">Delux Double</option>
-            <option value="4">Delux Twin</option>
-            <option value="5">Superior Suite Double</option>
-            <option value="6">Superior Suite Family Twin</option>
+            <option value="1">Gangnam-gu</option>
+            <option value="2">Seocho-gu District</option>
+            <option value="3">Guro-gu</option>
+            <option value="4">Gangbuk-gu</option>
+            <option value="4">Gangdong-gu</option>
+            <option value="5">Mapo-gu</option>
+            <option value="6">Seodaemun-gu District</option>
           </select>
           </td>
           </tr>
           <tr>
-            <td>Adults</td>
+            <td>Participants</td>
             <td>
-                  <select class="custom-select">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-            </td>
-            <td>Minor</td>
-                <td>
-                  <select class="custom-select">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-            </td>
-            <td>Infants</td>
-                <td>
                   <select class="custom-select">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -118,32 +100,32 @@
   <div class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Standard Double</h4>
+        <h4 class="my-0 font-weight-normal">Survival Rate Trend</h4>
       </div>
       <div class="card-body">
-        <h3 class="card-title pricing-card-title" style="margin-bottom: 30px">KRW 109,433</h3>
-        <img src="{% static 'img/standardDouble.jpg' %}" style="width: 100%"/>
-        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View Rate</button>
+        <!--<h3 class="card-title pricing-card-title" style="margin-bottom: 30px">KRW 109,433</h3>-->
+        <img src="{% static 'img/img1.png' %}" style="width: 100%"/>
+        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 55px;background-color: #ad9e87;border: none;">View</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Standard Twin</h4>
+        <h4 class="my-0 font-weight-normal">Regional Information</h4>
       </div>
       <div class="card-body">
-        <h3 class="card-title pricing-card-title" style="margin-bottom: 30px">KRW 114,178</h3>
-        <img src="{% static 'img/standardTwin.jpg' %}" style="width: 100%"/>
-        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View Rate</button>
+        <!--<h3 class="card-title pricing-card-title" style="margin-bottom: 30px">KRW 114,178</h3>-->
+        <img src="{% static 'img/img2.png' %}" style="width: 100%"/>
+        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Standard Family Twin</h4>
+        <h4 class="my-0 font-weight-normal">Start-up Risk</h4>
       </div>
       <div class="card-body">
-          <h3 class="card-title pricing-card-title" style="margin-bottom: 30px">KRW 134,178</h3>
-        <img src="{% static 'img/standardFTwin.jpg' %}" style="width: 100%"/>
-        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View Rate</button>
+        <!--<h3 class="card-title pricing-card-title" style="margin-bottom: 30px">KRW 134,178</h3>-->
+        <img src="{% static 'img/img3.png' %}" style="width: 100%"/>
+        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View</button>
       </div>
     </div>
   </div>
@@ -151,32 +133,29 @@
   <div class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Delux Double</h4>
+        <h4 class="my-0 font-weight-normal">Comparison</h4>
       </div>
       <div class="card-body">
-          <h3 class="card-title pricing-card-title" style="margin-bottom: 30px">KRW 125,678</h3>
-        <img src="{% static 'img/deluxeDouble.jpg' %}" style="width: 100%"/>
-        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View Rate</button>
+        <img src="{% static 'img/img6.png' %}" style="width: 100%"/>
+        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Delux Twin</h4>
+        <h4 class="my-0 font-weight-normal">Sales Information</h4>
       </div>
       <div class="card-body">
-          <h3 class="card-title pricing-card-title" style="margin-bottom: 30px">KRW 125,678</h3>
-        <img src="{% static 'img/deluxeTwin.jpg' %}" style="width: 100%"/>
-        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View Rate</button>
+        <img src="{% static 'img/img8.png' %}" style="width: 100%"/>
+        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Superior Suite Double</h4>
+        <h4 class="my-0 font-weight-normal">Alley commercial area</h4>
       </div>
       <div class="card-body">
-          <h3 class="card-title pricing-card-title" style="margin-bottom: 30px">KRW 190,142</h3>
-        <img src="{% static 'img/superiorSDouble.jpg' %}" style="width: 100%"/>
-        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View Rate</button>
+        <img src="{% static 'img/img7.png' %}" style="width: 100%"/>
+        <button type="button" class="btn btn-lg btn-block btn-primary" style="margin-top: 45px;background-color: #ad9e87;border: none;">View</button>
       </div>
     </div>
 
